@@ -1,0 +1,10 @@
+apiVersion: s3.aws.upbound.io/v1beta1
+kind: BucketOwnershipControls
+metadata:
+  name: example
+spec:
+  forProvider:
+    bucket: garreeoke-example1
+    region: us-west-2
+    rule:
+      - objectOwnership: BucketOwnerPreferred
