@@ -4,7 +4,7 @@ metadata:
   name: example
 spec:
   forProvider:
-    bucket: garreeoke-example1
+    bucket: crossplane-demo-garreeoke
     region: us-west-2
     rule:
       - objectOwnership: BucketOwnerPreferred
