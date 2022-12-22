@@ -1,9 +1,0 @@
-apiVersion: demo.upbound.io/v1alpha1
-kind: S3Owner
-metadata:
-  name: garreeoke-s3owner-1
-  namespace: default
-spec:
-  id: garreeoke-s3owner-1
-  region: "us-west-2"
-  ownership: "BucketOwnerPreferred"
