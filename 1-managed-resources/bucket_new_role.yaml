@@ -1,9 +1,9 @@
 apiVersion: iam.aws.upbound.io/v1beta1
 kind: Role
 metadata:
-  name: crossplane-demo-garreeoke-s3-iam-role
+  name: crossplane-demo-changeme-s3-iam-role
   labels:
-    role: crossplane-demo-garreeoke-s3-iam-role
+    role: crossplane-demo-changeme-s3-iam-role
 spec:
   forProvider:
     assumeRolePolicy: |

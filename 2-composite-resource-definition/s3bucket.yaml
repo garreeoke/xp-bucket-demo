@@ -1,9 +1,9 @@
 apiVersion: demo.upbound.io/v1alpha1
 kind: S3Bucket
 metadata:
-  name: crossplane-demo-garreeoke-xrd
+  name: crossplane-demo-changeme-xrd
   namespace: default
 spec:
-  id: crossplane-demo-garreeoke-xrd
+  id: crossplane-demo-changeme-xrd
   region: "us-west-2"
   ownership: "BucketOwnerPreferred"

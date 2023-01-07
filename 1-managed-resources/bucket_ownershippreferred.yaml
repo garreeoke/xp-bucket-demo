@@ -1,10 +1,10 @@
 apiVersion: s3.aws.upbound.io/v1beta1
 kind: BucketOwnershipControls
 metadata:
-  name: crossplane-demo-garreeoke-ownership
+  name: crossplane-demo-changeme-ownership
 spec:
   forProvider:
-    bucket: crossplane-demo-garreeoke
+    bucket: crossplane-demo-changeme
     region: us-west-2
     rule:
       - objectOwnership: BucketOwnerPreferred

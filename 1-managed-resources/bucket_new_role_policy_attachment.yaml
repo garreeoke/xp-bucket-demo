@@ -1,12 +1,12 @@
 apiVersion: iam.aws.upbound.io/v1beta1
 kind: RolePolicyAttachment
 metadata:
-  name: crossplane-demo-garreeoke-s3-rpa
+  name: crossplane-demo-changeme-s3-rpa
   labels:
-    role: crossplane-demo-garreeoke-s3-rpa
+    role: crossplane-demo-changeme-s3-rpa
 spec:
   forProvider:
     policyArnRef:
-      name: crossplane-demo-garreeoke-s3-crud
+      name: crossplane-demo-changeme-s3-crud
     roleRef:
-      name: crossplane-demo-garreeoke-s3-iam-role
+      name: crossplane-demo-changeme-s3-iam-role

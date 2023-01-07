@@ -1,9 +1,9 @@
 apiVersion: iam.aws.upbound.io/v1beta1
 kind: Policy
 metadata:
-  name: crossplane-demo-garreeoke-s3-crud
+  name: crossplane-demo-changeme-s3-crud
   labels:
-    role: crossplane-demo-garreeoke-s3-iam-role
+    role: crossplane-demo-changeme-s3-iam-role
 spec:
   forProvider:
     policy: |
@@ -18,7 +18,7 @@ spec:
           {
             "Effect":"Allow",
             "Action":["s3:ListBucket","s3:GetBucketLocation"],
-            "Resource":"arn:aws:s3:::crossplane-demo-garreeoke"
+            "Resource":"arn:aws:s3:::crossplane-demo-changeme"
           },
           {
             "Effect": "Allow",
@@ -30,7 +30,7 @@ spec:
               "s3:GetObjectAcl",
               "s3:DeleteObject"
             ],
-            "Resource": "arn:aws:s3:::crossplane-demo-garreeoke/*"
+            "Resource": "arn:aws:s3:::crossplane-demo-changeme/*"
           }
         ]
       }
