@@ -1,7 +1,7 @@
 apiVersion: s3.aws.upbound.io/v1beta1
 kind: BucketOwnershipControls
 metadata:
-  name: example
+  name: crossplane-demo-garreeoke-ownership
 spec:
   forProvider:
     bucket: crossplane-demo-garreeoke
