@@ -1,0 +1,11 @@
+apiVersion: demo.upbound.io/v1alpha1
+kind: S3BucketIamBuilder
+metadata:
+  name: crossplane-demo-garreeoke-iambuilder
+  namespace: default
+spec:
+  id: crossplane-demo-garreeoke-iambuilder
+  region: "us-west-2"
+  ownership: "BucketOwnerPreferred"
+  config:
+    iamConfig: role_new_crud_ibp

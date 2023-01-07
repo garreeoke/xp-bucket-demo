@@ -1,14 +1,14 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
-  name: s3-bucket-role-policy.demo.upbound.io
+  name: xs3bucketiambuilders.demo.upbound.io
   labels:
     composition: role-policy
 spec:
   writeConnectionSecretsToNamespace: default
   compositeTypeRef:
     apiVersion: demo.upbound.io/v1alpha1
-    kind: XS3Builder
+    kind: XS3BucketIamBuilder
   resources:
     - base:
         apiVersion: s3.aws.upbound.io/v1beta1
@@ -26,7 +26,27 @@ spec:
         - fromFieldPath: spec.id
           toFieldPath: spec.forProvider.tags.Name
     - base:
-        apiVersion: cfg.upbound.io/v1alpha1
+        apiVersion: s3.aws.upbound.io/v1beta1
+        kind: BucketOwnershipControls
+        spec:
+          forProvider:
+            region: us-west-2
+      name: s3bucket-ownership
+      patches:
+        - fromFieldPath: spec.region
+          toFieldPath: spec.region
+        - fromFieldPath: spec.id
+          toFieldPath: metadata.name
+          transforms:
+            - type: string
+              string:
+                fmt: "%s-ownership"
+        - fromFieldPath: spec.id
+          toFieldPath: spec.forProvider.bucket
+        - fromFieldPath: spec.ownership
+          toFieldPath: spec.forProvider.rule[0].objectOwnership
+    - base:
+        apiVersion: builder.upbound.io/v1alpha1
         kind: XIam
         spec:
           cloud: aws
@@ -36,15 +56,15 @@ spec:
           cloudParameters:
             aws:
               region: us-west-2
-      name: s3bucket-policy
+      name: s3bucket-role-policy-rpa
       patches:
+        - fromFieldPath: spec.id
+          toFieldPath: spec.name
         - fromFieldPath: spec.config.iamConfig
           toFieldPath: spec.config
-        - fromFieldPath: spec.i
+        - fromFieldPath: spec.id
           toFieldPath: metadata.name
           transforms:
             - type: string
               string:
                 fmt: "%s-s3-role-new-crud-ibp"
-        - fromFieldPath: spec.id
-          toFieldPath: spec.name

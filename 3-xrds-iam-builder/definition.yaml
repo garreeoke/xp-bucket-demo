@@ -1,22 +1,22 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: CompositeResourceDefinition
 metadata:
-  name: xs3builders.demo.upbound.io
+  name: xs3bucketiambuilders.demo.upbound.io
 spec:
   group: demo.upbound.io
   names:
-    kind: XS3Builder
-    plural: xs3builders
+    kind: XS3BucketIamBuilder
+    plural: xs3bucketiambuilders
   claimNames:
-    kind: S3Builder
-    plural: s3builders
+    kind: S3BucketIamBuilder
+    plural: s3bucketiambuilders
   versions:
     - name: v1alpha1
       served: true
       referenceable: true
       schema:
         openAPIV3Schema:
-          description: Create s3 buckets
+          description: Create s3 buckets with role and policy with upbound builder
           type: object
           properties:
             spec:
@@ -28,6 +28,9 @@ spec:
                 region:
                   type: string
                   description: Region
+                ownership:
+                  type: string
+                  description: "Ownership of bucket BucketOwnerPreferred ObjectWriter or BucketOwnerEnforced"
                 config:
                   type: object
                   description: Place to put additional config items
