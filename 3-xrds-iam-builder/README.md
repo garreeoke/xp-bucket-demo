@@ -15,7 +15,7 @@ To see the differences, look at the compositions. The one using Upbound Builder 
 2. Create the definition and composition on you cluster:
    * `kubectl apply -f defintion.yaml`
    * `kubectl apply -f composition.yaml`
-3. Modify the claim file (examples/s3bucket-iambuilder.yaml) and modify changme to something else.
+3. Modify the claim file (examples/s3bucket-iambuilder.yaml) and modify **changme** to something else.
 4. Apply the claim:
    * `kubectl apply -f examples/s3bucket-iambuilder.yaml`
 5. Verify managed resources: 
