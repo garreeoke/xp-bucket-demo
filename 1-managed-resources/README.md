@@ -21,4 +21,4 @@ provider and not within a composition.
    * `kubectl delete -f ./`
 
 ## Next
-*[Build the same resources in a composition](../2-composite-resource-definition).
+* [Build the same resources in a composition](../2-composite-resource-definition).
