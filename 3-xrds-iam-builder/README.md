@@ -12,13 +12,14 @@ To see the differences, look at the compositions. The one using Upbound Builder 
 
 ## Steps
 1. Follow [setup](../README.md)
-2. Create the definition and composition on you cluster:
+2. Install Upbound Builder for IAM (TBD - Upbound customers only)
+3. Create the definition and composition on you cluster:
    * `kubectl apply -f defintion.yaml`
    * `kubectl apply -f composition.yaml`
-3. Modify the claim file (examples/s3bucket-iambuilder.yaml) and modify **changme** to something else.
-4. Apply the claim:
+4. Modify the claim file (examples/s3bucket-iambuilder.yaml) and modify **changme** to something else.
+5. Apply the claim:
    * `kubectl apply -f examples/s3bucket-iambuilder.yaml`
-5. Verify managed resources: 
+6. Verify managed resources: 
    * `kubectl get managed`
-6. Cleanup:
+7. Cleanup:
    * `kubectl delete -f examples/s3bucket-iambuilder.yaml`
