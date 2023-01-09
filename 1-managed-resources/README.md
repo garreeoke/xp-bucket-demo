@@ -13,8 +13,12 @@ provider and not within a composition.
 ## Steps
 1. Follow [setup](../README.md)
 2. In each file, search and replace the work changeme and replace with your own name.
-3. Apply manifests in the folder: `kubectl apply -f ./`
-4. Verify managed resources: `kubectl get managed`
+3. Apply manifests in the folder:
+   * `kubectl apply -f ./`
+4. Verify managed resources: 
+   * `kubectl get managed`
+5. Cleanup:
+   * `kubectl delete -f ./`
 
 ## Next
 *[Build the same resources in a composition](../2-composite-resource-definition).

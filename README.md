@@ -41,3 +41,6 @@ Each folder will create the following:
 * One S3 bucket
 * Ownership preferences on the S3 bucket
 * A new role, policy and role policy attachment
+
+## Notes
+Each folder can be run and there should be no naming conflicts.
