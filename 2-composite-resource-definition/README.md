@@ -22,4 +22,4 @@ with a single API call.
    * `kubectl get managed`
 
 ## Next
-*[Build the same resources in a composition](../2-composite-resource-definition).
+*[Build the same resources in a composition, but use the Upbound Builder](../3-xrds-iam-builder).
