@@ -24,4 +24,4 @@ with a single API call.
    * `kubectl delete -f examples/s3bucket.yaml`
 
 ## Next
-* [Use the Upbound Builder](../3-xrds-iam-builder).
+* [Use the Upbound Builder](../3-xrds-iam-builder)
