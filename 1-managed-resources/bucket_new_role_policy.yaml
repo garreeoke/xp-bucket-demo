@@ -4,6 +4,7 @@ metadata:
   name: crossplane-demo-changeme-s3-crud
   labels:
     role: crossplane-demo-changeme-s3-iam-role
+    crossplane-demo: managed-resources
 spec:
   forProvider:
     policy: |

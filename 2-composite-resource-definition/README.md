@@ -19,7 +19,7 @@ with a single API call.
 4. Apply the claim:
    * `kubectl apply -f examples/s3bucket.yaml`
 5. Verify managed resources: 
-   * `kubectl get managed`
+   * `kubectl get managed -l crossplane.io/claim-name=crossplane-demo-changeme-xrd`
 6. Cleanup:
    * `kubectl delete -f examples/s3bucket.yaml`
 

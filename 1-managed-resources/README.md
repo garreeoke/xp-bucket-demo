@@ -16,7 +16,7 @@ provider and not within a composition.
 3. Apply manifests in the folder:
    * `kubectl apply -f ./`
 4. Verify managed resources: 
-   * `kubectl get managed`
+   * `kubectl get managed -l crossplane-demo=managed-resources`
 5. Cleanup:
    * `kubectl delete -f ./`
 

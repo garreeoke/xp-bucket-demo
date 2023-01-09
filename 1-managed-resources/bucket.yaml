@@ -2,6 +2,8 @@ apiVersion: s3.aws.upbound.io/v1beta1
 kind: Bucket
 metadata:
   name: crossplane-demo-changeme
+  labels:
+    crossplane-demo: managed-resources
 spec:
   forProvider:
     region: us-west-2

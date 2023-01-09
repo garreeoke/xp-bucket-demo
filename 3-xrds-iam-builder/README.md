@@ -20,6 +20,6 @@ To see the differences, look at the compositions. The one using Upbound Builder 
 5. Apply the claim:
    * `kubectl apply -f examples/s3bucket-iambuilder.yaml`
 6. Verify managed resources: 
-   * `kubectl get managed`
+   * `kubectl get managed -l crossplane.io/claim-name=crossplane-demo-changeme-iambuilder`
 7. Cleanup:
    * `kubectl delete -f examples/s3bucket-iambuilder.yaml`

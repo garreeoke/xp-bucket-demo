@@ -4,6 +4,7 @@ metadata:
   name: crossplane-demo-changeme-s3-rpa
   labels:
     role: crossplane-demo-changeme-s3-rpa
+    crossplane-demo: managed-resources
 spec:
   forProvider:
     policyArnRef:
