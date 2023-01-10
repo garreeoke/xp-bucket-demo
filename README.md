@@ -4,9 +4,9 @@ There are three demos in this repo to show different ways to use Crossplane to b
 gain familiarity of how Crossplane works from using individual resources, to compositions and finally how Upbound builders
 can make it easier and more standardized.
 
-* Managed Resources - Build each resource on its own 
-* Composite Resource Definition - Create a XRD and Composition to build everything with one API call
-* IAM Builder - Same as #2, however this uses Upbound's IAM Builder functionality to automatically build the IAM and reduce configuration burden by 45%.
+* **Managed Resources** - Build each resource on its own 
+* **Composite Resource Definition** - Create a XRD and Composition to build everything with one API call
+* **IAM Builder** - Automatically configure the needed IAM and reduce configuration burden by 45%
 
 ** The IAM Builder is only available for Upbound's existing or potential customers. 
 
