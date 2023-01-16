@@ -31,10 +31,11 @@ spec:
                 ownership:
                   type: string
                   description: "Ownership of bucket BucketOwnerPreferred ObjectWriter or BucketOwnerEnforced"
-                config:
-                  type: object
-                  description: Place to put additional config items
-                  x-kubernetes-preserve-unknown-fields: true
+                builderConfig:
+                  type: string
+                  description: "Which builder config to use"
               required:
                 - id
                 - region
+                - ownership
+                - builderConfig

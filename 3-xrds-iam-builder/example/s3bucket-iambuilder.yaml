@@ -7,5 +7,4 @@ spec:
   id: crossplane-demo-changeme-iambuilder
   region: "us-west-2"
   ownership: "BucketOwnerPreferred"
-  config:
-    iamConfig: role_new_crud_ibp
+  builderConfig: role-new-crud

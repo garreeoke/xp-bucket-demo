@@ -46,25 +46,30 @@ spec:
         - fromFieldPath: spec.ownership
           toFieldPath: spec.forProvider.rule[0].objectOwnership
     - base:
-        apiVersion: builder.upbound.io/v1alpha1
-        kind: XIam
+        apiVersion: upbound.io/v1alpha1
+        kind: XBuilder
         spec:
-          cloud: aws
-          cloudService: s3
+          compositionSelector:
+            matchLabels:
+              builder: iam
+              cloud: aws
+              service: s3
           resourceConfig:
             providerConfigName: default
-          cloudParameters:
-            aws:
-              region: us-west-2
+          builderConfig:
+            cloudParameters:
+              iam:
+                aws:
+                  region: us-west-2
       name: s3bucket-role-policy-rpa
       patches:
         - fromFieldPath: spec.id
           toFieldPath: spec.name
-        - fromFieldPath: spec.config.iamConfig
+        - fromFieldPath: spec.builderConfig
           toFieldPath: spec.config
         - fromFieldPath: spec.id
           toFieldPath: metadata.name
           transforms:
             - type: string
               string:
-                fmt: "%s-s3-role-new-crud-ibp"
+                fmt: "%s-s3-role-new-crud"
