@@ -66,7 +66,7 @@ spec:
         - fromFieldPath: spec.id
           toFieldPath: spec.name
         - fromFieldPath: spec.builderConfig
-          toFieldPath: spec.config
+          toFieldPath: spec.compositionSelector.matchLabels.config
         - fromFieldPath: spec.id
           toFieldPath: metadata.name
           transforms:
